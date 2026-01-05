@@ -6,6 +6,7 @@ const {
   update_Todo,
   delete_Todo,
 } = require("../services/todo.service");
+const TodoDTO = require("../dtos/todoDto");
 
 // next() => Movies the request to the next middleware
 // next(error) => Sends the error to the error handling middleware
@@ -13,8 +14,10 @@ const {
 // Request -> Middleware -> Route -> Controller -> Error middleware -> Response
 exports.getTodos = async (req, res, next) => {
   try {
-    const todos = await getAllTodos();
-    res.status(200).json({ success: true, data: todos });
+    const { search } = req.query; // Gets search value from URL query
+    const todos = await getAllTodos(search);
+    const newTodos = todos.map((todo) => new TodoDTO(todo));
+    res.status(200).json({ success: true, data: newTodos });
   } catch (error) {
     next(error);
   }
