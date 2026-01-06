@@ -17,11 +17,11 @@ A `Task Management Application` built using the `MERN stack (MongoDB, Express.js
 - `Backend hosted on render`
   - Live Demo: https://task-management-jr6a.onrender.com/
 
-## Preview Video
+## Project Preview Video
 
-<div align="center">
-    <video src="./todo-preview.mp4" controls width="700"><video>
-</div>
+Click on image and watch demo video
+
+[![Watch Demo](./demo-img.png)](https://vimeo.com/1151873165?share=copy&fl=sv&fe=ci)
 
 ## Tech Stack
 
