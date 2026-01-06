@@ -6,10 +6,11 @@ import {
 } from "react-router-dom";
 import { Home, Create, SingleTodo, Edit, Error } from "./pages";
 import RootLayout from "./layout/RootLayout";
+import RootError from "./components/RootError";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/" element={<RootLayout />} errorElement={<RootError />}>
       <Route index element={<Home />} />
       <Route path="create" element={<Create />} />
       <Route path="todos/:id" element={<SingleTodo />} />
