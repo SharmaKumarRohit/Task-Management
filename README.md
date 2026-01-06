@@ -52,7 +52,7 @@ Click on image and watch demo video
 ## Features
 
 - Create, Read, Update, Delete `(CRUD)` Tasks
-- Search support (todos get latest first and searching case-insensitive)
+- Search support with `debouncing feature` (todos get latest first and searching case-insensitive)
 - Task Status Management (Completed/Not Completed)
 - Timestamped Tasks
 - Clean & Responsive UI
