@@ -40,7 +40,7 @@ function DeleteTodoModel() {
         </button>
         <button
           type="submit"
-          className="font-medium px-6 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white transition-colors cursor-pointer w-full sm:w-1/6 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="font-medium px-6 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white transition-colors cursor-pointer w-full sm:w-1/6 flex justify-center items-center disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={isPending}
           onClick={handleDelete}
         >
