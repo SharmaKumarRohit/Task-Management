@@ -5,13 +5,12 @@ const TodoContext = createContext();
 
 function TodoProvider({ children }) {
   const [todos, setTodos] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [isModelOpen, setIsModelOpen] = useState(false);
   useEffect(() => {
     async function fetchTodos() {
-      setIsLoading(true);
       try {
         const {
           data: { data },

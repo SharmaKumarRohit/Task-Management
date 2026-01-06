@@ -4,7 +4,7 @@ import Loader from "./UI/Loader";
 
 function Todos() {
   const { todos, isLoading } = useTodos();
-  if (todos.length === 0 && isLoading) {
+  if (isLoading) {
     return <Loader />;
   }
   return (
