@@ -11,6 +11,7 @@ function TodoProvider({ children }) {
   const [isModelOpen, setIsModelOpen] = useState(false);
   useEffect(() => {
     async function fetchTodos() {
+      setIsLoading(true);
       try {
         const {
           data: { data },
