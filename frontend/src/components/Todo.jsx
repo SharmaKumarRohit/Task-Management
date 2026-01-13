@@ -13,11 +13,7 @@ function Todo({ _id, title, completed, priority, createdAt }) {
     >
       <div className="p-4 flex flex-col gap-2.5">
         <div className="flex items-center justify-between">
-          <h3
-            className={`w-fit uppercase text-xs font-semibold tracking-wider border px-2 py-1 rounded-full ${getPriorityColors(
-              priority
-            )}`}
-          >
+          <h3 className={`priority_tag ${getPriorityColors(priority)}`}>
             {priority} Priority
           </h3>
           <ToggleButton id={_id} completed={completed} />
